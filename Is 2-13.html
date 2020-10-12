@@ -1,0 +1,21 @@
+<form name="numbers">
+<input type="text" name="age" onchange="calculate();">
+<input type="button" value="Go" onclick="calculate( );">
+</form>
+
+<script>
+	function calculate()
+	{
+		n=document.numbers.age.value;
+		var a = new Array(n);
+		sum = 1;
+		for (i=0; i<n; i++)
+		{
+			a[i] = Math.round(Math.random()*50-10);
+			document.write(a[i] + "\t\t");
+			sum *= a[i];
+		}
+		document.write("<br>");
+		document.write("Произведение элементов массива = " + sum);		
+	}
+</script>

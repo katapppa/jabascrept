@@ -1,0 +1,25 @@
+<form name="numbers">
+<p>Uznat pravdu</p>
+<input type="button" value="Go" onclick="calculate( );">
+</form>
+
+<script>
+	function calculate()
+	{
+		n=42;
+		var a = new Array(n);
+		sum = 1;
+		for (i=0; i<n; i++)
+		{
+			a[i] = Math.round(Math.random()*100);
+			document.write(a[i] + "\t\t");
+			sum += a[i];
+		}
+		document.write("<br>");
+		document.write("Всего учеников = " + sum);
+		if (sum > 999)
+			document.write("<br> Всего учеников четырехзначное количество");
+		else
+			document.write("<br> Всего учеников не четырехзначное количество");
+	}
+</script>

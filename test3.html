@@ -1,0 +1,24 @@
+<h1>Type the number to fact</h1>
+<form name="vvod">
+<input type="text" name="age">
+<input type="button" value="Go" onclick="calculate( );">
+</form>
+
+<script>
+	function calculate( ) 
+	{
+		n=Number(document.vvod.age.value);
+		if (isNaN(n))
+			alert("DUMB FUCK");
+		if (n <= 0)
+			alert("Number must be more than 0");
+		i = 1;
+		sum = 1;
+		while (i <= n)
+		{
+			document.write(i + "! " + "= " + i * sum + "<br>");
+			sum = i * sum;
+			i++;
+		}
+	}
+</script>

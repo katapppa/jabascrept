@@ -1,0 +1,49 @@
+<form name="numbers">
+<p>Введите размерность матрицы:</p>
+<input type="text" name="age">
+<p>Введите a:</p>
+<input type="text" name="a">
+<p>Введите b:</p>
+<input type="text" name="b"><br><br>
+<input type="button" value="Go" onclick="calculate();">
+</form>
+
+<script>
+	function calculate() 
+	{
+	n=document.numbers.age.value;
+	a=document.numbers.a.value;
+	b=document.numbers.b.value;
+	sum = 0;
+	if (b == "" || a == "" || n == "")
+	{
+		document.write("MISTAKE1");
+		return 0;
+	}
+	if (isNaN(a) || isNaN(b) || isNaN(n))
+	{
+		document.write("MISTAKE2");
+		return 0;
+	}
+	if (a <= 0 || b <= 0)
+	{
+		document.write("MISTAKE3");
+		return 0;
+	}
+	var mas = new Array(n);
+	for (i=0; i<n; i++)
+	{
+		mas[i] = new Array(n);
+		for (j=0; j<n; j++)
+		{
+			mas[i][j] = Math.round(Math.random()*120-20);
+			if (mas[i][j]%a == 0 || mas[i][j]%b == 0)
+				sum++;
+			document.write(mas[i][j] + "\t\r");
+		}
+		document.write("<br>");
+	}
+	document.write("<br>");
+	document.write("Количество элементов кратных " + a + " или " + b + " = " + sum);
+	}
+</script>

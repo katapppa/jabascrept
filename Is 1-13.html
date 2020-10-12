@@ -1,0 +1,38 @@
+<form name="numbers">
+<input type="text" name="age" onchange="calculate();">
+<input type="button" value="Расчет" onclick="calculate( );">
+</form>
+
+<script language="JavaScript">
+function calculate( ) {
+n=document.numbers.age.value;
+var a = new Array(n);
+for (i=0; i<n; i++){
+	a[i] = new Array(n);
+	for (j=0; j<n; j++){
+		a[i][j] = Math.round(Math.random()*120-20);
+		document.write(a[i][j] + "\t\r");
+	}
+	document.write("<br>");
+}
+document.write("<br><br>");
+c = 0;
+sum = 0;
+for (i=0; i<n; i++){
+	for (j=0; j<n; j++)
+	{
+		if (j == c)
+		{
+			if (a[i][j]%2 == 0)
+				sum++;
+			document.write("<font color=red>"+a[i][j] + "</font>" + "\t\r");
+			continue;
+		}		
+		document.write(a[i][j] + "\t\r");
+	}
+	c++;
+	document.write("<br>");
+}
+document.write("<br> Количество четных элементов = " + sum);
+}
+</script>

@@ -1,0 +1,34 @@
+<form name="numbers">
+<input type="text" name="age" onchange="calculate();">
+<input type="button" value="Go" onclick="calculate( );">
+</form>
+
+<script>
+	function calculate()
+	{
+		n=document.numbers.age.value;
+		var a = new Array(n);
+		var c = new Array(n);
+		for (i=0; i<n; i++)
+		{
+			a[i] = Math.round(Math.random()*1);
+			document.write(a[i] + "\t\t");
+		}
+		document.write("<br>");
+		l = 0;
+		i = 0;
+		while(i<n)
+		{
+			c[l] = a[i];
+			document.write(c[l] + "\t\t");
+			if (a[i] == 0)
+			{
+				while (a[i] == 0)
+					i++;
+				continue;
+			}
+			l++;
+			i++;
+		}	
+	}
+</script>

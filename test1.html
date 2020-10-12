@@ -1,0 +1,28 @@
+<h1>Type your age:</h1>
+<form name="vvod">
+<input type="text" name="age">
+<input type="button" value="Go" onclick="calculate( );">
+</form>
+
+<script>
+	function calculate( ) 
+	{
+		n=Number(document.vvod.age.value);
+		if (isNaN(n))
+			alert("dumb fuck");
+		if (n <= 0)
+			alert("You should born to print");
+		if (n > 0 && n <= 2)
+			alert("You too young");
+		if(n > 2 && n <= 7)
+			alert("You just a kid");
+		if(n > 7 && n <= 18)
+			alert("You schoolkid");
+		if(n > 18 && n <= 22)
+			alert("You student now");
+		if(n > 22 && n <= 70)
+			alert("You adult *sad*");
+		if(n > 70)
+			alert("Evry year now is a gift");
+	}
+</script>

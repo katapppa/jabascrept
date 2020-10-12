@@ -1,0 +1,40 @@
+<h1>Type day of week</h1>
+<form name="vvod">
+<input type="text" name="age">
+<input type="button" value="Go" onclick="calculate( );">
+</form>
+
+<script>
+	function calculate( ) 
+	{
+		n=document.vvod.age.value;
+		n = n.toLowerCase();
+		switch(n)
+		{
+			case "понедельник" :
+				alert("4 Предмета");
+				break ;
+			case 'вторник' :
+				alert("2 Предмета");
+				break ;
+			case 'среда' :
+				alert("0 Предметов");
+				break ;
+			case 'четверг' :
+				alert("4 Предмета");
+				break ;
+			case 'пятница' :
+				alert("6 Предмета");
+				break ;
+			case 'суббота' :
+				alert("2 Предмета");
+				break ;
+			case 'воскресенье' :
+				alert("0 Предметов");
+				break ;
+			default:
+				alert("WRONG!!!!");
+				break;
+		}
+	}
+</script>

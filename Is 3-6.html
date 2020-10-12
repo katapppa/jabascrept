@@ -1,0 +1,39 @@
+<form name="numbers">
+<input type="text" name="age" onchange="calculate();">
+<input type="button" value="Go" onclick="calculate( );">
+</form>
+
+<script>
+	function calculate()
+	{
+		n=document.numbers.age.value;
+		var a = new Array(n);
+		var c = new Array(c);
+		sum = 0;
+		l = 0;
+		for (var i=0; i<n; i++)
+		{
+			a[i] = Math.round(Math.random()*10000);
+			document.write(a[i] + "\t\r");
+			if (a[i] > 99 && a[i] < 1000)
+			{
+				c[l] = a[i];
+				l++;
+			}
+		}
+		document.write("<br>");	
+		g = 0;
+		document.write("Из них трехзначные:");	
+		document.write("<br>");
+		if (l == 0)
+		{
+			document.write("Таких нету");
+		}
+		while (l != 0)
+		{
+			document.write(c[g] + "\t\t");
+			g++;
+			l--;
+		}
+	}
+</script>
